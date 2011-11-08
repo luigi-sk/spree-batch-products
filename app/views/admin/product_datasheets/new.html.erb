@@ -5,7 +5,10 @@
   <center>
   <%= f.label t(:upload_a_product_datasheet) %>
   <%= f.file_field :xls %>
-  <%= f.submit %>
   </center>
+  <p class="form-buttons" data-hook="buttons">
+    <%= button t('actions.create') %>
+  </p>
+  
 </fieldset>
 <% end %>
