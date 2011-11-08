@@ -1,0 +1,14 @@
+sk:
+  batch_updates: "Hromadné upravy"
+  product_datasheets: "Datasheet produktov"
+  new_product_datasheet: "Nový datasheet produktov"
+  datasheet_name: "Meno datashee-u"
+  file_size: "Veľkosť súboru"
+  date_processed: "Dátum spracovania"
+  product_datasheet: "Datasheet produktu"
+  actions:
+    upload: "Nahrať"
+  upload_product_datasheet: "Nahrať product datasheet"
+  upload_a_product_datasheet: "Nahrať Product Datasheet"
+  notice_messages:
+    product_datasheet_saved: "Datasheet uložený"
