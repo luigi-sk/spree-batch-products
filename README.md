@@ -12,6 +12,11 @@ Each ProductDatasheet record has 4 integer fields that give a basic description 
 * `:failed_records =>` sum of all records that had a 'false' return when saved
 * `:failed_queries =>` number of rows that matched no Product or Variant records
 
+Choosing processor
+==================
+
+You can choose original ProductDatasheet model to handle uploaded spreadsheet or you can choose ProductDatasheetAdvanced which use processor from [spree-import-products](https://github.com/joshmcarthur/spree-import-products)
+
 Installation
 ============
 
