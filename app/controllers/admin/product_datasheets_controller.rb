@@ -39,7 +39,8 @@ class Admin::ProductDatasheetsController < Admin::BaseController
   end
   
   def create
-    @product_datasheet = ProductDatasheet.create(params[:product_datasheet])
+    datasheet_class = Object.const_get(params[:product_datasheet][:processor])
+    @product_datasheet = datasheet_class.create(params[:product_datasheet])
     if @product_datasheet.xls.original_filename.end_with?(".xls") and @product_datasheet.save
       if defined? Delayed::Job
         Delayed::Job.enqueue(@product_datasheet)
@@ -49,7 +50,7 @@ class Admin::ProductDatasheetsController < Admin::BaseController
       flash.notice = I18n.t("notice_messages.product_datasheet_saved")
       redirect_to admin_product_datasheets_path
     else
-      @product_datasheets = ProductDatasheet.not_deleted
+      @product_datasheets = datasheet_class.not_deleted
       render :template => 'admin/product_datasheets/index', :action => :new
     end
   end

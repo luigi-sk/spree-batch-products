@@ -12,3 +12,56 @@ sk:
   upload_a_product_datasheet: "Nahrať Product Datasheet"
   notice_messages:
     product_datasheet_saved: "Datasheet uložený"
+  processor: "Processor"
+  number:
+    format:
+      precision: 3
+      separator: ","
+      delimiter: " "
+      significant: false
+      strip_insignificant_zeros: false
+
+    currency:
+      format:
+          unit: "€"
+          precision: 2
+          format: "%n %u"
+          separator: ","
+          delimiter: " "
+          significant: false
+          strip_insignificant_zeros: false
+
+    percentage:
+        format:
+            delimiter: " "
+
+    precision:
+        format:
+            delimiter: ""
+
+    human:
+        format:
+            precision: 1
+            delimiter: ""
+            significant: false
+            strip_insignificant_zeros: false
+
+        storage_units:
+            format: "%n %u"
+            units:
+                byte:
+                    other: "B"
+                    one: "B"
+                kb: "KB"
+                mb: "MB"
+                gb: "GB"
+                tb: "TB"
+        decimal_units:
+            format: "%n %u"
+            units:
+               unit: ""
+               thousand: Tisíc
+               million: Milión
+               billion: Miliarda
+               trillion: Bilión
+               quadrillion: Biliarda
